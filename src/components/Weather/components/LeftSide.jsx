@@ -12,7 +12,7 @@ const LeftSide = () => {
             <div className={style.currentWeatherContainer}>
                 <h2>{currentWeather.main.temp.toFixed(0)}°C {currentWeather.weather[0].main}</h2>
                 <marquee behavior="alternate" direction="right" scrollamount="4">
-                <img src={`http://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@2x.png`} alt="" />
+                <img src={`https://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@2x.png`} alt="" />
                 </marquee>
             </div>
             

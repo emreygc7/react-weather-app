@@ -17,7 +17,7 @@ const WeatherContextProvider = ({ children }) => {
 
     
     const cityCoordinatesCall = async () => {
-        const baseUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${cityInformation.name}&appid=${process.env.REACT_APP_API_KEY}`
+        const baseUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${cityInformation.name}&appid=${process.env.REACT_APP_API_KEY}`
         try{
             const response = await axios.get(baseUrl)
             setCityInformation({...cityInformation, lat: response.data[0].lat, lon: response.data[0].lon } )
