@@ -94,7 +94,7 @@ const WeatherChart = () => {
           options: {
             chart: {
               width: "100%",
-              height: "60%",
+              height: "200%",
             },
           },
         },
@@ -103,13 +103,16 @@ const WeatherChart = () => {
   };
 
   return isLoaded == true ? (
+    <div style={{width: '100%', height:'100%'}}>
     <Chart
       options={chartConfig.options}
       series={chartConfig.series}
       type="area"
-      height={"95%"}
+      height={"85%"}
       width={"100%"}
     />
+    </div>
+
   ) : null;
 };
 
