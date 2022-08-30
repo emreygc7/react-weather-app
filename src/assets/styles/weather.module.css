@@ -1,0 +1,163 @@
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* TopSide.jsx */
+.topContainer{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 4rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+
+.topContainer h1{
+    border: 1px solid rgba(255, 255, 255,0.2);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+/* LeftSide.jsx */
+
+.leftSideContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    width: 20%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+
+.currentWeatherContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.detailContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    letter-spacing: 1px;
+    padding: 0rem 4rem;
+}
+
+.detailContainer p {
+   cursor: default;
+   width: 100%;
+}
+
+/* Chart.jsx */
+.chartContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80vh;
+}
+
+
+/* responsive */
+
+/* MOBILE DEVICES */ 
+@media screen and (min-width:320px) and (max-width: 480px){
+    .mainContainer{
+        gap: 0;
+    }
+    .topContainer{
+        padding: 0;
+        box-shadow: none;
+    }
+    .topContainer h1{
+        font-size: 16px;
+        border: none;
+    }
+    .leftSideContainer{
+        width: 100%;
+        padding: 1rem 0rem;
+        font-size: 12px;
+        text-align: center;
+        box-shadow: none;
+    }
+    .chartContainer{
+        flex-direction: column;
+        gap: 2rem;
+        height: min-content;
+        padding: 1rem 0rem;
+    }
+}
+
+/* iPADS, TABLETS */ 
+@media screen and (min-width:481px) and (max-width: 768px){
+    .mainContainer{
+        gap: 0;
+    }
+    .topContainer{
+        padding: 0;
+        box-shadow: none;
+    }
+    .topContainer h1{
+        font-size: 20px;
+        border: none;
+    }
+    .leftSideContainer{
+        width: 100%;
+        padding: 1rem 0rem;
+        font-size: 15px;
+        text-align: center;
+        box-shadow: none;
+    }
+    .chartContainer{
+        flex-direction: column;
+        gap: 2rem;
+        height: min-content;
+        padding: 1rem 0rem;
+    }
+}
+
+/* SMALL SCREENS, LAPTOPS */
+@media screen and (min-width:769px) and (max-width: 1024px){
+    .mainContainer{
+        gap: 0;
+    }
+    .topContainer{
+        padding: 0;
+        box-shadow: none;
+    }
+    .topContainer h1{
+        font-size: 20px;
+        border: none;
+    }
+    .leftSideContainer{
+        width: 100%;
+        padding: 1rem 0rem;
+        font-size: 15px;
+        text-align: center;
+        box-shadow: none;
+    }
+    .chartContainer{
+        flex-direction: column;
+        gap: 2rem;
+        height: min-content;
+        padding: 1rem 0rem;
+    }
+}
+
+/* DESKTOPS, LARGE SCREENS */ 
+@media screen and (min-width:1025px) and (max-width: 1200px) {
+   
+    .topContainer h1{
+        font-size: 20px;
+    }
+    .leftSideContainer{
+        align-items: flex-end;
+        background-color: rebeccapurple;
+    }
+}
+
