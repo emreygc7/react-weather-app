@@ -4,13 +4,12 @@
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    z-index: 1;
+    position: relative;
 }
 
 .header input {
-    background-color: #475569;
     border: none;
-    color: white;
     width: 250px;
     padding: .5rem;
 }
@@ -26,8 +25,6 @@
 .btn{
     padding: .5rem 2rem;
     border: none;
-    background-color: #475569;
-    color: white;
     border-radius: 5px;
     cursor: pointer;
     font-family: 'Ubuntu', sans-serif;
@@ -35,6 +32,35 @@
 }
 
 .btn:hover{
-    background-color: #333f50;
+    background-color: #71757c;
+    color: white;
     transition: all .3s ease;
+}
+
+
+/* theme */
+
+.dark{
+    background: linear-gradient(to bottom, #1e293b, #475569);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.darkInputs{
+    background-color: #475569;
+    color: white;
+}
+
+
+.light{
+    background: white;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.lightInputs{
+    background-color: #eee;
+    color: black;
 }
