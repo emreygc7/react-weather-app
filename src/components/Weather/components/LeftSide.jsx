@@ -1,14 +1,16 @@
 import { useContext } from 'react'
 import { weatherContext } from '../../../context/WeatherContext'
 import style from '../../../assets/styles/weather.module.css'
+import { useTheme } from '../../../context/ThemeContext'
 
 const LeftSide = () => {
 
-    const {currentWeather, isLoaded} = useContext(weatherContext)
+    const { currentWeather, isLoaded } = useContext(weatherContext)
+    const { theme } = useTheme()
 
   return (
     isLoaded == true ? (
-        <div className={style.leftSideContainer}>
+        <div className={theme === "dark" ? (`${style.leftSideContainer} ${style.dark}`): (`${style.leftSideContainer} ${style.light}`)}>
             <div className={style.currentWeatherContainer}>
                 <h2>{currentWeather.main.temp.toFixed(0)}°C {currentWeather.weather[0].main}</h2>
                 <marquee behavior="alternate" direction="right" scrollamount="4">

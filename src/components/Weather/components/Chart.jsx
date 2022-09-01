@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import { weatherContext } from "../../../context/WeatherContext";
 import Chart from "react-apexcharts";
+import { useTheme } from "../../../context/ThemeContext";
 
 const WeatherChart = () => {
   const { nextDaysWeather, isLoaded } = useContext(weatherContext);
+  const { theme } = useTheme()
 
   const chartConfig = {
     series: [
@@ -49,14 +51,14 @@ const WeatherChart = () => {
         categories: isLoaded == true ? nextDaysWeather.map((d) => d.dt_txt) : null,
         labels: {
           style: {
-            colors: "#fff",
+            colors: theme === "dark" ? "#fff" : "#000000"
           },
         },
       },
       yaxis: {
         labels: {
           style: {
-            colors: "#fff",
+            colors: theme === "dark" ? "#fff" : "#000000"
           },
         },
       },
@@ -77,12 +79,12 @@ const WeatherChart = () => {
           fontSize: "14px",
           fontWeight: "100",
           fontFamily: "ubuntu, sans-serif",
-          color: "#fff",
+          color: theme === "dark" ? "#fff" : "#000000"
         },
       },
       legend: {
         labels: {
-          colors: "white",
+          colors: theme === "dark" ? "#fff" : "#000000"
         },
       },
       fill: {
