@@ -9,7 +9,7 @@ export const weatherContext = createContext()
 const WeatherContextProvider = ({ children }) => {
     
 
-    const [cityInformation, setCityInformation] = useState({name: "konya", lat: 0, lon: 0 })
+    const [cityInformation, setCityInformation] = useState({name: "konya", lat: 37.8768277, lon: 32.4874202 })
     const [currentWeather, setCurrentWeather] = useState(null)
     const [nextDaysWeather, setNextDaysWeather] = useState(null)
     const [isLoaded, setIsLoaded] = useState(false)
